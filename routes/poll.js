@@ -7,6 +7,7 @@ var guild_api = 'http://guildpower.net/api/guilds',
 	power_api = 'http://guildpower.net/api/all';
 
 exports.start = function() {
+	fs.mkdir('cache');
 	getGuilds();
 	getPower();
 };
