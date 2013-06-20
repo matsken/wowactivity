@@ -1,0 +1,13 @@
+doctype 5
+html
+	head
+		title= title
+		link(rel='stylesheet', href='../stylesheets/base.css')
+		script(src="http://code.jquery.com/jquery-1.10.1.min.js")
+		script(src="../javascripts/highcharts/js/highcharts.js")
+		script(src="../javascripts/highcharts/js/themes/dark-green.js")
+		script(src="../javascripts/trend.js")
+		script.
+			var guildData = #{guildData}
+	body
+		div#container

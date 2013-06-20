@@ -1,0 +1,33 @@
+doctype 5
+
+html
+	head
+		title= title
+		link(rel='stylesheet', href='../stylesheets/base.css')
+		script(src="http://code.jquery.com/jquery-1.10.1.min.js")
+		script(src="../javascripts/highcharts/js/highcharts.js")
+		script(src="../javascripts/highcharts/js/themes/dark-green.js")
+		script(src="../javascripts/power.js")
+
+	body
+		div.header データ元:
+			a(href="http://guildpower.net")
+				http://guildpower.net
+			span (last update: #{lastUpdate})
+		div.header 各プロットの大きさはギルドの想定されるアクティブなアカウント数(≒ギルドの規模)です。 重なっていて見づらい場所はドラッグアンドドロップでズームできます。
+		div.header 各ギルドをクリックすると、そのギルドが主に活動している時間帯のグラフが見られます。
+		div.header HTML5対応ブラウザでご覧ください。
+			
+		label(for='sel')
+			横軸
+		select(id='sel')
+			option(value='pvppower', label='PvPパワー')
+			option(value='raidpower', label='Raidパワー(最新)')
+			option(value='oldraidpower', label='Raidパワー(一つ前)')
+			option(value='thisweek', label='週間活動量')
+			option(value='pv', label='PV')
+			option(value='challengepower', label='チャレンジモード')
+			
+		input#check(type="checkbox")
+		label(for='check') 人数で割る（10mと25mが均一化されます）
+		div#container 
